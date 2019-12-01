@@ -3,6 +3,7 @@ package com.project.construction;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -33,6 +34,8 @@ public class startapp extends AppCompatActivity {
 
     EditText pass;
     EditText email;
+    private ProgressDialog mdialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +46,7 @@ public class startapp extends AppCompatActivity {
         ImageView button=findViewById(R.id.register);
 
 
+        mdialog=new ProgressDialog(this);
 
 
 
@@ -71,11 +75,15 @@ public class startapp extends AppCompatActivity {
                     pass.setError("Required Field..");co2=1;
                 }
                 if(co2==0&&cou==0) {
+                    mdialog.setMessage("PROcessing..");
+                    mdialog.show();
                     mAuth.signInWithEmailAndPassword(memail, mpass)
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     if (task.isSuccessful()) {
+                                        mdialog.dismiss();
+
                                         // Sign in success, update UI with the signed-in user's information
                                         FirebaseUser user = mAuth.getCurrentUser();
                                         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -91,7 +99,7 @@ public class startapp extends AppCompatActivity {
                                                     startActivity(intent);
                                                 }
 
-                                                if (value.equals("sell")) {
+                                                else {
                                                     Intent intent = new Intent(startapp.this, sell.class);
                                                     startActivity(intent);
                                                 }

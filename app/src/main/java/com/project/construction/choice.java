@@ -49,7 +49,8 @@ public class choice extends AppCompatActivity {
             public void onClick(View view) {
             constraintLayout.setBackgroundResource(R.color.first);
                 myRef.setValue("hire");
-
+                Intent intent=new Intent(choice.this,hire.class);
+                startActivity(intent);
 
             }
         });
@@ -58,6 +59,8 @@ public class choice extends AppCompatActivity {
             public void onClick(View view) {
                 constraintLayout.setBackgroundResource(R.color.second);
                 myRef.setValue("sell");
+                Intent intent=new Intent(choice.this,sell.class);
+                startActivity(intent);
             }
         });
     }

@@ -45,10 +45,10 @@
 
     <Button
         android:id="@+id/login"
-        android:layout_width="123dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="532dp"
-        android:layout_marginEnd="144dp"
+        android:layout_width="136dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="128dp"
         android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

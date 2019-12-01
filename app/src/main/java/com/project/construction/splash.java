@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 public class splash extends AppCompatActivity {
     private final int SPLASH_DISPLAY_LENGTH = 2000;
@@ -13,6 +16,10 @@ public class splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        Animation animation= AnimationUtils.loadAnimation(this,R.anim.transition);
+        ImageView imageView=findViewById(R.id.imageView);
+        imageView.startAnimation(animation);
+
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
