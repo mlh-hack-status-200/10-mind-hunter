@@ -31,10 +31,12 @@ public class startapp extends AppCompatActivity {
 
 
     private FirebaseAuth mAuth;
+    String value;
 
     EditText pass;
     EditText email;
     private ProgressDialog mdialog;
+    DatabaseReference rootRef,demoRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +49,6 @@ public class startapp extends AppCompatActivity {
 
 
         mdialog=new ProgressDialog(this);
-
 
 
 
@@ -85,33 +86,38 @@ public class startapp extends AppCompatActivity {
                                         mdialog.dismiss();
 
                                         // Sign in success, update UI with the signed-in user's information
-                                        FirebaseUser user = mAuth.getCurrentUser();
+
+                                        /*FirebaseUser user = mAuth.getCurrentUser();
                                         FirebaseDatabase database = FirebaseDatabase.getInstance();
+
                                         DatabaseReference myRef = database.getReference("message");
-                                        myRef.addValueEventListener(new ValueEventListener() {
+
+                                        myRef.child("value").addListenerForSingleValueEvent(new ValueEventListener() {
                                             @Override
                                             public void onDataChange(DataSnapshot dataSnapshot) {
-                                                // This method is called once with the initial value and again
-                                                // whenever data at this location is updated.
-                                                String value = dataSnapshot.getValue(String.class);
-                                                if (value.equals("hire")) {
-                                                    Intent intent = new Intent(startapp.this, hire.class);
-                                                    startActivity(intent);
-                                                }
-
-                                                else {
-                                                    Intent intent = new Intent(startapp.this, sell.class);
-                                                    startActivity(intent);
-                                                }
-
-
+                                                 value = dataSnapshot.getValue(String.class);
                                             }
 
                                             @Override
-                                            public void onCancelled(DatabaseError error) {
-                                                // Failed to read value
+                                            public void onCancelled(DatabaseError databaseError) {
                                             }
                                         });
+
+
+*/
+                                              //  if (value.equals("1")) {
+                                                    Intent intent = new Intent(startapp.this, sell.class);
+                                                    startActivity(intent);
+                                               // }
+
+                                               // if (value.equals("2")) {
+                                               //     Intent intent = new Intent(startapp.this, sell.class);
+                                               //     startActivity(intent);
+                                              //  }
+
+
+
+
 
 
                                     } else {

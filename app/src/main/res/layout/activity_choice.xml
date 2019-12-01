@@ -5,6 +5,7 @@
     android:id="@+id/choice"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/nback"
     tools:context=".choice">
 
     <Button
@@ -15,7 +16,7 @@
 
         android:layout_marginTop="264dp"
         android:background="@drawable/values"
-        android:text="Hire a \nContractor"
+        android:text="Buy a \nContractor"
         android:textColor="#FCE9E7E7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +29,7 @@
         android:layout_marginTop="264dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/values"
-        android:text="Be a \nContractor"
+        android:text="Hire a \nContractor"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -51,17 +52,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/download" />
 
-    <Button
-        android:id="@+id/confirm"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="116dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="128dp"
-        android:layout_marginBottom="16dp"
-        android:background="?attr/colorAccent"
-        android:bufferType="spannable"
-        android:text="Confirm"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

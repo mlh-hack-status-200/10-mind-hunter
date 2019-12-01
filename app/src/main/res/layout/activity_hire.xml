@@ -4,46 +4,120 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#331D79"
     tools:context=".hire">
+
+
+    <Button
+        style="@style/Theme.AppCompat.Light.Dialog.MinWidth"
+        android:layout_width="100dp"
+        android:layout_height="34dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="4dp"
+        android:background="#DD3C73"
+        android:text="Submit"
+
+        android:textColor="#E7E3E3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/icon"
         android:layout_width="match_parent"
         android:layout_height="227dp"
+        android:background="#331D79"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="502dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="414dp"
+        android:layout_height="450dp"
+        android:background="#331D79"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icon">
+        app:layout_constraintTop_toBottomOf="@+id/icon"
+        app:layout_constraintVertical_bias="0.0">
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:stretchColumns="1">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_marginTop="304dp"
                 android:ems="10"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
+                android:hint="Name"
+                android:inputType="text"
                 android:textColor="#E7E3E3"
                 android:textColorHint="#949090"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <EditText
+                android:id="@+id/exper"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Work Experience"
+                android:inputType="textMultiLine"
+                android:textColor="#E7E3E3"
+                android:textColorHint="#949090"
+                tools:layout_editor_absoluteX="22dp"
+                tools:layout_editor_absoluteY="35dp" />
 
+            <EditText
+                android:id="@+id/project"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Projects"
+                android:inputType="textMultiLine"
+                android:textColor="#E7E3E3"
+                android:textColorHint="#949090"
+                tools:layout_editor_absoluteX="22dp"
+                tools:layout_editor_absoluteY="35dp" />
 
-        </TableLayout>
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Amount of Workforce"
+                android:inputType="number"
+                android:textColor="#EEEEEE"
+                android:textColorHint="#949090"
+                tools:layout_editor_absoluteX="22dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+            <EditText
+                android:id="@+id/gpay"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Google Pay ID"
+                android:inputType="number"
+                android:textColor="#EEEEEE"
+                android:textColorHint="#949090"
+                tools:layout_editor_absoluteX="22dp"
+                tools:layout_editor_absoluteY="35dp" />
+        </LinearLayout>
     </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
